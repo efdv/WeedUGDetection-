@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/background_light"
+    tools:context=".MainActivity">
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0">
+
+        <android.support.constraint.ConstraintLayout
+            android:id="@+id/Scroll"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toTopOf="@+id/iv_fondoSup"
+            app:layout_constraintTop_toTopOf="@+id/iv_fondoSup">
+
+            <ImageView
+                android:id="@+id/iv_fondoSup"
+                android:layout_width="1299dp"
+                android:layout_height="195dp"
+                android:background="#1E8A8989"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@android:color/transparent" />
+
+            <TextView
+                android:id="@+id/tvlogo"
+                android:layout_width="203dp"
+                android:layout_height="191dp"
+                android:layout_marginTop="4dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginRight="8dp"
+                android:background="@mipmap/weedugdetectorv2"
+                app:layout_constraintEnd_toStartOf="@+id/btnUpLoad"
+                app:layout_constraintHorizontal_bias="0.483"
+                app:layout_constraintStart_toEndOf="@+id/btnCap"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <Button
+                android:id="@+id/btnCap"
+                android:layout_width="110dp"
+                android:layout_height="115dp"
+                android:layout_marginStart="48dp"
+                android:layout_marginLeft="48dp"
+                android:layout_marginTop="64dp"
+                android:background="@mipmap/camara300"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tvlogo" />
+
+            <TextView
+                android:id="@+id/tvCap"
+                android:layout_width="wrap_content"
+                android:layout_height="20dp"
+                android:layout_marginTop="8dp"
+                android:text="Capturar"
+                android:textColor="@android:color/holo_green_dark"
+                android:textSize="15sp"
+                app:layout_constraintEnd_toEndOf="@+id/btnCap"
+                app:layout_constraintHorizontal_bias="0.442"
+                app:layout_constraintStart_toStartOf="@+id/btnCap"
+                app:layout_constraintTop_toBottomOf="@+id/btnCap" />
+
+            <Button
+                android:id="@+id/btnUpLoad"
+                android:layout_width="112dp"
+                android:layout_height="114dp"
+                android:layout_marginTop="64dp"
+                android:layout_marginEnd="48dp"
+                android:layout_marginRight="48dp"
+                android:background="@mipmap/examinar300"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tvlogo" />
+
+            <TextView
+                android:id="@+id/tvExa"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="Examinar"
+                android:textColor="@android:color/holo_green_dark"
+                android:textSize="15sp"
+                app:layout_constraintEnd_toEndOf="@+id/btnUpLoad"
+                app:layout_constraintHorizontal_bias="0.56"
+                app:layout_constraintStart_toStartOf="@+id/btnUpLoad"
+                app:layout_constraintTop_toBottomOf="@+id/btnUpLoad" />
+
+            <Button
+                android:id="@+id/btnVideo"
+                android:layout_width="109dp"
+                android:layout_height="115dp"
+                android:layout_marginTop="64dp"
+                android:background="@mipmap/video300"
+                app:layout_constraintStart_toStartOf="@+id/btnCap"
+                app:layout_constraintTop_toTopOf="@+id/tvCap" />
+
+            <Button
+                android:id="@+id/btnInfo"
+                android:layout_width="109dp"
+                android:layout_height="115dp"
+                android:layout_marginEnd="48dp"
+                android:layout_marginRight="48dp"
+                android:background="@mipmap/info"
+                android:onClick="buttonClick"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/btnVideo" />
+
+            <TextView
+                android:id="@+id/tvVideo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="RealTime"
+                android:textColor="@android:color/holo_green_dark"
+                android:textSize="15sp"
+                app:layout_constraintEnd_toEndOf="@+id/btnVideo"
+                app:layout_constraintHorizontal_bias="0.404"
+                app:layout_constraintStart_toStartOf="@+id/btnVideo"
+                app:layout_constraintTop_toBottomOf="@+id/btnVideo" />
+
+            <TextView
+                android:id="@+id/tvInfo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="Politicas de Privacidad"
+                android:textColor="@android:color/holo_green_dark"
+                android:textSize="15sp"
+                app:layout_constraintEnd_toEndOf="@+id/btnInfo"
+                app:layout_constraintStart_toStartOf="@+id/btnInfo"
+                app:layout_constraintTop_toBottomOf="@+id/btnInfo" />
+
+
+        </android.support.constraint.ConstraintLayout>
+    </ScrollView>
+</android.support.constraint.ConstraintLayout>
